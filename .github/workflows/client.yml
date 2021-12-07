@@ -52,7 +52,7 @@ jobs:
       - name: Validate Terraform configuration
         id: validate
         working-directory: ./terraform
-        runs: terraform validate
+        run: terraform validate
       - name: SSH into Instance
         working-directory: ./terraform
         run: |-
