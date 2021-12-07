@@ -52,7 +52,9 @@ jobs:
       - name: Validate Terraform configuration
         id: validate
         working-directory: ./terraform
+        runs: terraform validate
       - name: SSH into Instance
+        working-directory: ./terraform
         run: |-
           terraform output -raw ssh_private_key > terraform.pem
           chmod 400 terraform.pem
