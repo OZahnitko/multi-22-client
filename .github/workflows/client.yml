@@ -54,4 +54,4 @@ jobs:
         run: |-
           terraform output -raw ssh_private_key > terraform.pem
           chmod 400 terraform.pem
-          ssh ec2@$(terraform output -raw instance_public_ip) < init.sh -i ./terraform.pem
+          ssh ec2@$(terraform output -raw instance_public_ip) < ../init.sh -i ./terraform.pem
